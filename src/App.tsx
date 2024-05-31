@@ -9,7 +9,7 @@ import "./components/UserList.scss";
 const App: React.FC = () => {
     return (
         <Container>
-            <Typography variant="h2" gutterBottom>
+            <Typography variant="h4" className="title">
                 User Management
             </Typography>
             <UserForm onSave={() => {}} />

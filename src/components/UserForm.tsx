@@ -36,6 +36,7 @@ const UserForm: React.FC<{ user?: User; onSave: () => void }> = ({
                 onChange={(e) => setName(e.target.value)}
                 fullWidth
                 margin="normal"
+                className="textField"
             />
             <TextField
                 label="Email"
@@ -43,6 +44,7 @@ const UserForm: React.FC<{ user?: User; onSave: () => void }> = ({
                 onChange={(e) => setEmail(e.target.value)}
                 fullWidth
                 margin="normal"
+                className="textField"
             />
             <Button variant="contained" color="primary" onClick={handleSave}>
                 {user ? "Update" : "Add"} User
