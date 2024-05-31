@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RecoilRoot } from "recoil";
+import theme from "./theme";
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
@@ -11,7 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <RecoilRoot>
-            <App />
+            <ThemeProvider theme={theme}>
+                <CssBaseline />
+                <App />
+            </ThemeProvider>
         </RecoilRoot>
     </React.StrictMode>
 );
